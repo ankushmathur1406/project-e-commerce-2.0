@@ -1,0 +1,340 @@
+#darkToggle {
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    background: white;
+    border-radius: 5px;
+    border: 2px solid #555;
+  }
+  
+  .darkToggle:checked {
+    background: #333;
+  }
+  
+  .dark {
+    color: white;
+    background: #444;
+  }
+
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family:'Times New Roman', Times, serif;
+}
+h1{
+    font-size: 50px;
+    line-height: 64px;
+    color: black;
+}
+h2{
+    font-size: 46px;
+    line-height: 54px;
+    color: black;
+}
+h3{
+    font-style: oblique;
+}
+h4{
+    font-size: 30px;
+    /* line-height: 64px; */
+    color: black;
+}
+h6{
+    font-weight: 700;
+    font-size: 18px;
+    /* color: black; */
+}
+p{
+    font-size: 30px;
+    color: #465b52;
+    margin: 15px 0 20px 0;
+}
+.section-p1{ /*do section ke beech ka padding*/
+    padding:40px 80px
+}
+.section-m1{
+    margin: 40px 0;
+}
+img{
+    height: 90px;
+    width: 100px;
+}
+#header{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding:20px 80px;
+    /* background:#E3E6F3; */
+    box-shadow: 0px 5px 15px rgba(0,0,0.06);
+    z-index: 999;
+    position: sticky;
+    top:0;
+    left:0;
+}
+#header .button{
+    border-radius: 50px;
+}
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#navbar li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+#navbar li a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    color:black;
+    transition: 0.3s ease;
+}
+#navbar li a:hover,
+#navbar li a.active{ /*taki jo page par rhe wo highleted rhe iske liye anchor tag me ek active class jode hai */
+    color:blue;
+}
+#navbar li a.active::after,
+#navbar li a:hover::after{
+    content:"";
+    width: 30%;
+    height: 2px;
+    background: blue;
+    position:absolute;/*isse pehle apna parent ko relative kro jo ki li hai */
+    bottom: -4px;
+    left:20px;
+}
+#mobile{
+    display:none;
+    align-items: center;
+}
+#close{
+    display: none;
+}
+/*navbar over*/  /*hero start*/
+#hero{
+    background-image:url("img/hero3.jpg");
+    height:90vh;
+    width: 100%;
+    background-size:cover;
+    background-position: top 25% left 0;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content:center;
+    font-size: 50px;
+}
+#hero h4{
+    padding-bottom: 20px;
+}
+#hero h1{
+    color:#088178;
+}
+#hero h2{
+    color:#088178;
+}
+#hero button{
+    background-image: url("img/button2.png");
+    color:#088178;
+    border: 0px;
+    padding: 14px 80px 14px 65px;
+    background-repeat: no-repeat;
+    cursor:pointer;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+#feature{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#feature .fe-box{
+    width:180px;
+    text-align: center;
+    padding:25px 15px;
+    box-shadow: 20px 20px 34px rgba(0,0,0,0.03);
+    border: 1px solid white;
+    border-radius: 4px;
+    margin: 15px 0;
+}
+#feature .fe-box:hover{
+    box-shadow: 10px 10px 54px rgba(70,62,221,0.1);
+}
+
+#feature .fe-box img{
+    width:100%;
+    margin-bottom: 10px;
+
+}
+#feature .fe-box h6{
+    display: inline-block;
+    padding:9px 8px 6px 8px;
+    line-height: 1;
+    border-radius: 8px;
+    color:aqua;
+    background-color:coral;
+}
+#feature .fe-box:nth-child(2) h6 { 
+ background-color:yellowgreen;
+}
+#feature .fe-box:nth-child(3) h6 { 
+    background-color:brown;
+}
+#feature .fe-box:nth-child(4) h6 { 
+    background-color:cadetblue;
+}
+#feature .fe-box:nth-child(5) h6 { 
+    background-color:blueviolet;
+}
+
+#product1{
+   text-align: center;
+}
+#product1 .pro-container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+#product1 .pro{
+    width:28%;
+    min-width:250px;
+    height:28%;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border:1px solid rgb(144, 72, 72);
+    background-color:pink;
+    font-weight: 600;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 20px 20px 20px rgba(0,0,0,0.02);
+    margin:15px 0;
+    transition: 0,2s ease;
+    
+}
+#product1 .pro img{
+    width:90%;
+    height:50%;
+    border-radius: 20px;
+}
+#product .pro .des{
+    text-align: center;
+    padding: 10px 0;
+}
+#product .pro .des h5{
+    padding-top:7px;
+
+}
+#product .pro a{
+    text-decoration: none;
+    color:yellow;
+}
+
+.px-4 py-5 my-5 text-center{
+    background-color:aqua;
+}
+
+.gradient-background{
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(113,121,9,0.41789215686274506) 0%, rgba(0,212,255,1) 100%);
+background-size: 180% 180%;
+}
+
+.g-b2{
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(219,219,219,1) 27%, rgba(0,212,255,1) 100%);
+background-size: 180% 180%;
+}
+
+.g-b3{
+    background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(162,112,112,1) 100%);
+    background-size: 180% 180%;
+
+    }
+@media((min-width:319px) and (max-width:480px)) {
+    .section-p1{
+       padding: 40px 40px; 
+    }
+    #navbar{
+        display:flex;
+        flex-direction:column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top:0px;
+        right:-300px;/*isse mobile screen pe tabhi dikhega jab hum kuch click krege*/
+        height:100vh;
+        width:300px;
+        background-color:#E3E6F3;
+        box-shadow: 0 40px 60px rgba(0,0,0,0.1);
+        padding:80px 0 0 10px;
+        transition: 0.3s;
+    }
+    #navbar.active{
+        right: 0px;
+    }
+    #navbar li{
+        margin-bottom: 25px;
+    }
+    #mobile{
+        display:flex;
+        align-items: center;
+    }
+    #mobile a{
+        color: #1a1a1a;
+        font-size: 24px;
+        padding-left: 20px;
+    }
+    #close{
+        display: initial;
+        position: absolute;
+        top:30px;
+        left:30px;
+        color:black;
+        font-size:24px;
+    }
+    /*hero nhi kye kyunki coursel use kr liye*/
+    #feature{
+        justify-content: center;
+    }
+    #feature .fe-box{
+        margin: 15px 15px;
+    }
+    #product1 .pro-container{
+        justify-content: center;
+    }
+    #product1 .pro{
+        display: block;
+        margin:15px 0;
+        width:100%;
+    }
+}
+@media(max-width:477px){
+    .sdction-p1{
+        padding:20px;
+    }
+    #header{
+        padding: 0 80px;
+    }
+    #close{
+        display: initial;
+        position: absolute;
+        top:30px;
+        left:30px;
+        color:black;
+        font-size:24px;
+    }
+    #feature{
+        justify-content: center;
+    }
+    #feature .fe-box{
+        width: 155px;
+        margin:0 0 15px 0
+    }
+    #product1.pro{
+        width:100%;
+    }
+}
